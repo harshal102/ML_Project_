@@ -1,6 +1,9 @@
 import logging
 import os 
+import sys
 from datetime import datetime
+#from src.exception import CustomException
+
 
 
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
@@ -15,12 +18,6 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-if __name__=="__main__":
-    try:
-        a=1/0
-    except Exception as e:
-        logging.info("divided by zero")
-        raise CustomException(e,sys)
 
 
 """import logging
